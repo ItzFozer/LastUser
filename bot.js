@@ -35,11 +35,11 @@ var ti={}
 
 
 client.on('message', message => {
-	    const mm = message.mentions.members.first() || message.member;
+    const mm = message.mentions.members.first() || message.member;
     if(message.content == ('+profile')) {    
          const embed = new Discord.RichEmbed()
 		         .setColor("RANDOM")
-
+            .setImage('https://6.top4top.net/p_12515dswm1.gif')
              if (message.channel.type === 'dm') return message.reply('This Command Is Not Avaible In Dm\'s :x:');  
             var Canvas = module.require('canvas');
             var jimp = module.require('jimp');

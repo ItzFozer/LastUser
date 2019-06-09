@@ -35,8 +35,11 @@ var ti={}
 
 
 client.on('message', message => {
+	    const mm = message.mentions.members.first() || message.member;
     if(message.content == ('+profile')) {    
- 
+         const embed = new Discord.RichEmbed()
+		         .setColor("RANDOM")
+
              if (message.channel.type === 'dm') return message.reply('This Command Is Not Avaible In Dm\'s :x:');  
             var Canvas = module.require('canvas');
             var jimp = module.require('jimp');
@@ -154,7 +157,8 @@ client.on('message', message => {
                            
                            
                          
-                           
+                                   message.channel.send(embed);
+
                              })
                            
                              })
